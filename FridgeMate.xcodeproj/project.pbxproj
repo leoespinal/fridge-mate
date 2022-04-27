@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		850C0DE2281881BF00826BA8 /* FridgeMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DE1281881BF00826BA8 /* FridgeMateApp.swift */; };
-		850C0DE4281881BF00826BA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DE3281881BF00826BA8 /* ContentView.swift */; };
+		850C0DE4281881BF00826BA8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DE3281881BF00826BA8 /* WelcomeView.swift */; };
 		850C0DE6281881C100826BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850C0DE5281881C100826BA8 /* Assets.xcassets */; };
 		850C0DE9281881C100826BA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850C0DE8281881C100826BA8 /* Preview Assets.xcassets */; };
 		850C0DF3281881C100826BA8 /* FridgeMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DF2281881C100826BA8 /* FridgeMateTests.swift */; };
 		850C0DFD281881C100826BA8 /* FridgeMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DFC281881C100826BA8 /* FridgeMateUITests.swift */; };
 		850C0DFF281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DFE281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift */; };
+		850C0E0E281895F400826BA8 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E0D281895F400826BA8 /* Color+Extensions.swift */; };
+		850C0E102818F6CA00826BA8 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		850C0DDE281881BF00826BA8 /* FridgeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850C0DE1281881BF00826BA8 /* FridgeMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateApp.swift; sourceTree = "<group>"; };
-		850C0DE3281881BF00826BA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		850C0DE3281881BF00826BA8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		850C0DE5281881C100826BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850C0DE8281881C100826BA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		850C0DEE281881C100826BA8 /* FridgeMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		850C0DF8281881C100826BA8 /* FridgeMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		850C0DFC281881C100826BA8 /* FridgeMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateUITests.swift; sourceTree = "<group>"; };
 		850C0DFE281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		850C0E0D281895F400826BA8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,9 @@
 		850C0DE0281881BF00826BA8 /* FridgeMate */ = {
 			isa = PBXGroup;
 			children = (
+				850C0E0C281895DF00826BA8 /* Extensions */,
+				850C0E0B281893F600826BA8 /* Views */,
 				850C0DE1281881BF00826BA8 /* FridgeMateApp.swift */,
-				850C0DE3281881BF00826BA8 /* ContentView.swift */,
 				850C0DE5281881C100826BA8 /* Assets.xcassets */,
 				850C0DE7281881C100826BA8 /* Preview Content */,
 			);
@@ -125,6 +130,23 @@
 				850C0DFE281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift */,
 			);
 			path = FridgeMateUITests;
+			sourceTree = "<group>";
+		};
+		850C0E0B281893F600826BA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				850C0DE3281881BF00826BA8 /* WelcomeView.swift */,
+				850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		850C0E0C281895DF00826BA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				850C0E0D281895F400826BA8 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850C0DE4281881BF00826BA8 /* ContentView.swift in Sources */,
+				850C0DE4281881BF00826BA8 /* WelcomeView.swift in Sources */,
 				850C0DE2281881BF00826BA8 /* FridgeMateApp.swift in Sources */,
+				850C0E0E281895F400826BA8 /* Color+Extensions.swift in Sources */,
+				850C0E102818F6CA00826BA8 /* CapsuleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
