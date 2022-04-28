@@ -18,6 +18,8 @@ struct CapsuleButton: View {
 		switch color {
 		case .blueColor:
 			return .blueColor
+		case .blueVariantColor:
+			return .blueVariantColor
 		default:
 			return .black
 		}

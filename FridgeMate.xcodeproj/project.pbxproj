@@ -16,6 +16,10 @@
 		850C0DFF281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0DFE281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift */; };
 		850C0E0E281895F400826BA8 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E0D281895F400826BA8 /* Color+Extensions.swift */; };
 		850C0E102818F6CA00826BA8 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */; };
+		850C0E132819E89500826BA8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E122819E89500826BA8 /* OnboardingView.swift */; };
+		850C0E152819EBCA00826BA8 /* OnboardingChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E142819EBCA00826BA8 /* OnboardingChildView.swift */; };
+		850C0E182819EEFA00826BA8 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E172819EEFA00826BA8 /* OnboardingScreen.swift */; };
+		850C0E1A281A05E200826BA8 /* PreviewDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E19281A05E200826BA8 /* PreviewDevices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		850C0DFE281881C100826BA8 /* FridgeMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		850C0E0D281895F400826BA8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
+		850C0E122819E89500826BA8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		850C0E142819EBCA00826BA8 /* OnboardingChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingChildView.swift; sourceTree = "<group>"; };
+		850C0E172819EEFA00826BA8 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		850C0E19281A05E200826BA8 /* PreviewDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDevices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				850C0E0C281895DF00826BA8 /* Extensions */,
+				850C0E162819EEB800826BA8 /* Models */,
 				850C0E0B281893F600826BA8 /* Views */,
 				850C0DE1281881BF00826BA8 /* FridgeMateApp.swift */,
 				850C0DE5281881C100826BA8 /* Assets.xcassets */,
@@ -137,6 +146,8 @@
 			children = (
 				850C0DE3281881BF00826BA8 /* WelcomeView.swift */,
 				850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */,
+				850C0E122819E89500826BA8 /* OnboardingView.swift */,
+				850C0E142819EBCA00826BA8 /* OnboardingChildView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +158,15 @@
 				850C0E0D281895F400826BA8 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		850C0E162819EEB800826BA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				850C0E172819EEFA00826BA8 /* OnboardingScreen.swift */,
+				850C0E19281A05E200826BA8 /* PreviewDevices.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +301,11 @@
 			files = (
 				850C0DE4281881BF00826BA8 /* WelcomeView.swift in Sources */,
 				850C0DE2281881BF00826BA8 /* FridgeMateApp.swift in Sources */,
+				850C0E152819EBCA00826BA8 /* OnboardingChildView.swift in Sources */,
+				850C0E182819EEFA00826BA8 /* OnboardingScreen.swift in Sources */,
+				850C0E1A281A05E200826BA8 /* PreviewDevices.swift in Sources */,
 				850C0E0E281895F400826BA8 /* Color+Extensions.swift in Sources */,
+				850C0E132819E89500826BA8 /* OnboardingView.swift in Sources */,
 				850C0E102818F6CA00826BA8 /* CapsuleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

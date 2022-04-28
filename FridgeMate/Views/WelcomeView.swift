@@ -14,10 +14,7 @@ struct WelcomeView: View {
 		static let subtitleMaxWidth: CGFloat = 222
 		static let titleAndSubtitleStackWidth: CGFloat = 291
 	}
-
-	@State private var getStartedButtonAction: ButtonAction = {
-		print("Tapped get started button")
-	}
+	@State private var showOnboarding = false
 
     var body: some View {
 		VStack {
@@ -25,7 +22,7 @@ struct WelcomeView: View {
 				.resizable()
 				.shadow(color: .blueVariantColor, radius: 4, x: 0, y: 2)
 				.frame(width: Constants.imageViewDimension, height: Constants.imageViewDimension)
-			
+
 			// Title and subtitle
 			HStack {
 				VStack(alignment: .leading, spacing: 16) {
@@ -40,11 +37,17 @@ struct WelcomeView: View {
 				Spacer()
 			}
 			.frame(width: Constants.titleAndSubtitleStackWidth)
-			
+
 			Spacer()
-			
+
 			// Get started button
-			CapsuleButton(title: "Get Started", color: .blueColor, action: $getStartedButtonAction)
+			CapsuleButton(title: "Get Started", color: .blueColor, action: .constant {
+				showOnboarding.toggle()
+			})
+			.sheet(isPresented: $showOnboarding) {
+				// Present the onboarding flow
+				OnboardingView()
+			}
 		}
 		.frame(maxWidth: .infinity)
 		.padding(Constants.welcomeViewEdgeInsets)
@@ -55,6 +58,9 @@ struct WelcomeView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView()
+		ForEach(PreviewDevices.devices, id: \.self) { deviceName in
+			WelcomeView()
+				.previewDevice(PreviewDevice(rawValue: deviceName))
+		}
     }
 }
