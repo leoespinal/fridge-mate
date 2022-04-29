@@ -1,5 +1,5 @@
 //
-//  OnboardingChildView.swift
+//  OnboardingPageView.swift
 //  FridgeMate
 //
 //  Created by Leo Espinal on 4/27/22.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct OnboardingChildView: View {
+struct OnboardingPageView: View {
 	let model: OnboardingScreen
 	@Binding var showNextButton: Bool
+	@Environment(\.dismiss) private var dismiss
 
     var body: some View {
 		VStack(alignment: .center, spacing: 25) {
@@ -33,7 +34,8 @@ struct OnboardingChildView: View {
 
 			if showNextButton {
 				CapsuleButton(title: "Next", color: .blueVariantColor, action: .constant {
-					print("Go to app main screen")
+					saveOnboardingCompletedState()
+					dismiss()
 				})
 			}
 
@@ -43,11 +45,15 @@ struct OnboardingChildView: View {
 		.background(Color.blueColor)
 		.ignoresSafeArea()
     }
+
+	private func saveOnboardingCompletedState() {
+		UserDefaults.storeValue(true, forKey: "CompletedOnboarding")
+	}
 }
 
 struct OnboardingChildView_Previews: PreviewProvider {
     static var previews: some View {
-		OnboardingChildView(
+		OnboardingPageView(
 			model: OnboardingScreen(
 				imageName: "person-grocery-shopping",
 				title: "Buy your groceries",

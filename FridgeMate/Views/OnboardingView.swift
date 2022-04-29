@@ -13,7 +13,7 @@ struct OnboardingView: View {
     var body: some View {
 		TabView {
 			ForEach(models) { model in
-				OnboardingChildView(model: model, showNextButton: .constant(model.isFinalStep))
+				OnboardingPageView(model: model, showNextButton: .constant(model.isFinalStep))
 			}
 		}
 		.ignoresSafeArea()
@@ -26,6 +26,7 @@ struct OnboardingView_Previews: PreviewProvider {
 		ForEach(PreviewDevices.devices, id: \.self) { deviceName in
 			OnboardingView()
 				.previewDevice(PreviewDevice(rawValue: deviceName))
+				.previewDisplayName(deviceName)
 		}
     }
 }

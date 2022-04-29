@@ -17,9 +17,13 @@
 		850C0E0E281895F400826BA8 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E0D281895F400826BA8 /* Color+Extensions.swift */; };
 		850C0E102818F6CA00826BA8 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */; };
 		850C0E132819E89500826BA8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E122819E89500826BA8 /* OnboardingView.swift */; };
-		850C0E152819EBCA00826BA8 /* OnboardingChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E142819EBCA00826BA8 /* OnboardingChildView.swift */; };
+		850C0E152819EBCA00826BA8 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E142819EBCA00826BA8 /* OnboardingPageView.swift */; };
 		850C0E182819EEFA00826BA8 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E172819EEFA00826BA8 /* OnboardingScreen.swift */; };
 		850C0E1A281A05E200826BA8 /* PreviewDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E19281A05E200826BA8 /* PreviewDevices.swift */; };
+		850C0E1C281ACF8C00826BA8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E1B281ACF8C00826BA8 /* CustomTabBar.swift */; };
+		850C0E1E281B08CF00826BA8 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E1D281B08CF00826BA8 /* UserDefaults+Extensions.swift */; };
+		850C0E20281B702500826BA8 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E1F281B702400826BA8 /* TabBarItem.swift */; };
+		850C0E22281B81FD00826BA8 /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E21281B81FD00826BA8 /* TabBarIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +57,13 @@
 		850C0E0D281895F400826BA8 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		850C0E122819E89500826BA8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		850C0E142819EBCA00826BA8 /* OnboardingChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingChildView.swift; sourceTree = "<group>"; };
+		850C0E142819EBCA00826BA8 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		850C0E172819EEFA00826BA8 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		850C0E19281A05E200826BA8 /* PreviewDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDevices.swift; sourceTree = "<group>"; };
+		850C0E1B281ACF8C00826BA8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		850C0E1D281B08CF00826BA8 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		850C0E1F281B702400826BA8 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		850C0E21281B81FD00826BA8 /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,10 +152,13 @@
 		850C0E0B281893F600826BA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				850C0E1B281ACF8C00826BA8 /* CustomTabBar.swift */,
 				850C0DE3281881BF00826BA8 /* WelcomeView.swift */,
-				850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */,
 				850C0E122819E89500826BA8 /* OnboardingView.swift */,
-				850C0E142819EBCA00826BA8 /* OnboardingChildView.swift */,
+				850C0E142819EBCA00826BA8 /* OnboardingPageView.swift */,
+				850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */,
+				850C0E1F281B702400826BA8 /* TabBarItem.swift */,
+				850C0E21281B81FD00826BA8 /* TabBarIcon.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				850C0E0D281895F400826BA8 /* Color+Extensions.swift */,
+				850C0E1D281B08CF00826BA8 /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,13 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850C0E22281B81FD00826BA8 /* TabBarIcon.swift in Sources */,
 				850C0DE4281881BF00826BA8 /* WelcomeView.swift in Sources */,
 				850C0DE2281881BF00826BA8 /* FridgeMateApp.swift in Sources */,
-				850C0E152819EBCA00826BA8 /* OnboardingChildView.swift in Sources */,
+				850C0E152819EBCA00826BA8 /* OnboardingPageView.swift in Sources */,
 				850C0E182819EEFA00826BA8 /* OnboardingScreen.swift in Sources */,
+				850C0E20281B702500826BA8 /* TabBarItem.swift in Sources */,
+				850C0E1C281ACF8C00826BA8 /* CustomTabBar.swift in Sources */,
 				850C0E1A281A05E200826BA8 /* PreviewDevices.swift in Sources */,
 				850C0E0E281895F400826BA8 /* Color+Extensions.swift in Sources */,
 				850C0E132819E89500826BA8 /* OnboardingView.swift in Sources */,
+				850C0E1E281B08CF00826BA8 /* UserDefaults+Extensions.swift in Sources */,
 				850C0E102818F6CA00826BA8 /* CapsuleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

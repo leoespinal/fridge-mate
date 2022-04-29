@@ -15,44 +15,60 @@ struct WelcomeView: View {
 		static let titleAndSubtitleStackWidth: CGFloat = 291
 	}
 	@State private var showOnboarding = false
+	@State private var navigateToMainAppScreen = false
 
     var body: some View {
-		VStack {
-			Image("cherry-grocery-store")
-				.resizable()
-				.shadow(color: .blueVariantColor, radius: 4, x: 0, y: 2)
-				.frame(width: Constants.imageViewDimension, height: Constants.imageViewDimension)
+		NavigationView {
+			VStack {
+				Image("cherry-grocery-store")
+					.resizable()
+					.shadow(color: .blueVariantColor, radius: 4, x: 0, y: 2)
+					.frame(width: Constants.imageViewDimension, height: Constants.imageViewDimension)
 
-			// Title and subtitle
-			HStack {
-				VStack(alignment: .leading, spacing: 16) {
-					Text("Fridge\nMate")
-						.font(.system(size: 48, weight: .bold, design: .default))
-						.foregroundColor(.blueColor)
-						.multilineTextAlignment(.leading)
-					Text("Keep track of your groceries to prevent them from going to waste.")
-						.foregroundColor(.textLightGray)
-						.frame(maxWidth: Constants.subtitleMaxWidth)
+				// Title and subtitle
+				HStack {
+					VStack(alignment: .leading, spacing: 16) {
+						Text("Fridge\nMate")
+							.font(.system(size: 48, weight: .bold, design: .default))
+							.foregroundColor(.blueColor)
+							.multilineTextAlignment(.leading)
+						Text("Keep track of your groceries to prevent them from going to waste.")
+							.foregroundColor(.textLightGray)
+							.frame(maxWidth: Constants.subtitleMaxWidth)
+					}
+					Spacer()
 				}
+				.frame(width: Constants.titleAndSubtitleStackWidth)
+
 				Spacer()
-			}
-			.frame(width: Constants.titleAndSubtitleStackWidth)
 
-			Spacer()
+				// Get started button
+				CapsuleButton(title: "Get Started", color: .blueColor, action: .constant {
+					showOnboarding.toggle()
+				})
+				.sheet(isPresented: $showOnboarding,
+					   onDismiss: {
+							navigateToMainAppScreen.toggle()
+						}) {
+							// Present the onboarding flow
+							OnboardingView()
+								.interactiveDismissDisabled()
+						}
 
-			// Get started button
-			CapsuleButton(title: "Get Started", color: .blueColor, action: .constant {
-				showOnboarding.toggle()
-			})
-			.sheet(isPresented: $showOnboarding) {
-				// Present the onboarding flow
-				OnboardingView()
+				// Push the custom tab bar
+				NavigationLink(
+					destination:
+						CustomTabBar()
+							.navigationBarBackButtonHidden(true)
+							.navigationBarHidden(true),
+					isActive: $navigateToMainAppScreen
+				) { EmptyView() }
 			}
+			.frame(maxWidth: .infinity)
+			.padding(Constants.welcomeViewEdgeInsets)
+			.background(Color.backgroundOffWhite)
+			.ignoresSafeArea()
 		}
-		.frame(maxWidth: .infinity)
-		.padding(Constants.welcomeViewEdgeInsets)
-		.background(Color.backgroundOffWhite)
-		.ignoresSafeArea()
     }
 }
 
@@ -61,6 +77,7 @@ struct ContentView_Previews: PreviewProvider {
 		ForEach(PreviewDevices.devices, id: \.self) { deviceName in
 			WelcomeView()
 				.previewDevice(PreviewDevice(rawValue: deviceName))
+				.previewDisplayName(deviceName)
 		}
     }
 }

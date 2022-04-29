@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct FridgeMateApp: App {
+	private var hasCompletedOnboarding = UserDefaults.retrieveValue(using: "CompletedOnboarding") as? Bool ?? false
+
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+			if hasCompletedOnboarding {
+				CustomTabBar()
+			} else {
+				WelcomeView()
+			}
         }
     }
 }
