@@ -57,10 +57,7 @@ struct WelcomeView: View {
 
 				// Push the custom tab bar
 				NavigationLink(
-					destination:
-						CustomTabBar()
-							.navigationBarBackButtonHidden(true)
-							.navigationBarHidden(true),
+					destination: MainContentView().hiddenNavigationBarStyle(),
 					isActive: $navigateToMainAppScreen
 				) { EmptyView() }
 			}

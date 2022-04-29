@@ -63,4 +63,10 @@ extension Color {
 	static var textLightGray: Color {
 		Color(red: 150/255, green: 149/255, blue: 149/255)
 	}
+
+	/// Hex: #626060
+	/// RGBA: R: 98, G: 96, B: 96, A: 100
+	static var textDarkGray: Color {
+		Color(red: 98/255, green: 96/255, blue: 96/255)
+	}
 }

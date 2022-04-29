@@ -14,7 +14,7 @@ struct FridgeMateApp: App {
     var body: some Scene {
         WindowGroup {
 			if hasCompletedOnboarding {
-				CustomTabBar()
+				MainContentView()
 			} else {
 				WelcomeView()
 			}
