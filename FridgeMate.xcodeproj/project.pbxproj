@@ -26,6 +26,8 @@
 		850C0E24281B84B300826BA8 /* MyFridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E23281B84B300826BA8 /* MyFridgeView.swift */; };
 		850C0E27281BF38E00826BA8 /* Navigation+ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E26281BF38D00826BA8 /* Navigation+ViewModifiers.swift */; };
 		850C0E29281BFF9500826BA8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C0E28281BFF9500826BA8 /* TabBar.swift */; };
+		85D42CF22824B1CA004652DC /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D42CF12824B1CA004652DC /* AddItemView.swift */; };
+		85D42CF428270992004652DC /* FoodCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D42CF328270992004652DC /* FoodCategoryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		850C0E23281B84B300826BA8 /* MyFridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeView.swift; sourceTree = "<group>"; };
 		850C0E26281BF38D00826BA8 /* Navigation+ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+ViewModifiers.swift"; sourceTree = "<group>"; };
 		850C0E28281BFF9500826BA8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		85D42CF12824B1CA004652DC /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		85D42CF328270992004652DC /* FoodCategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 				850C0E0F2818F6CA00826BA8 /* CapsuleButton.swift */,
 				850C0E1F281B702400826BA8 /* TabBarItem.swift */,
 				850C0E28281BFF9500826BA8 /* TabBar.swift */,
+				85D42CF12824B1CA004652DC /* AddItemView.swift */,
+				85D42CF328270992004652DC /* FoodCategoryButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +335,8 @@
 				850C0E24281B84B300826BA8 /* MyFridgeView.swift in Sources */,
 				850C0E27281BF38E00826BA8 /* Navigation+ViewModifiers.swift in Sources */,
 				850C0DE2281881BF00826BA8 /* FridgeMateApp.swift in Sources */,
+				85D42CF22824B1CA004652DC /* AddItemView.swift in Sources */,
+				85D42CF428270992004652DC /* FoodCategoryButton.swift in Sources */,
 				850C0E152819EBCA00826BA8 /* OnboardingPageView.swift in Sources */,
 				850C0E182819EEFA00826BA8 /* OnboardingScreen.swift in Sources */,
 				850C0E20281B702500826BA8 /* TabBarItem.swift in Sources */,

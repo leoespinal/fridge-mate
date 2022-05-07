@@ -20,6 +20,10 @@ struct CapsuleButton: View {
 			return .blueColor
 		case .blueVariantColor:
 			return .blueVariantColor
+		case .accentOrange:
+			return .accentOrange
+		case .green:
+			return .green
 		default:
 			return .black
 		}
