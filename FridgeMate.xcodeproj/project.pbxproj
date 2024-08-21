@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85BD2A542C7586B10063F141 /* FridgeMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A532C7586B10063F141 /* FridgeMateApp.swift */; };
+		85BD2A562C7586B10063F141 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A552C7586B10063F141 /* ContentView.swift */; };
+		85BD2A582C7586B20063F141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BD2A572C7586B20063F141 /* Assets.xcassets */; };
+		85BD2A5B2C7586B20063F141 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BD2A5A2C7586B20063F141 /* Preview Assets.xcassets */; };
+		85BD2A652C7586B20063F141 /* FridgeMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A642C7586B20063F141 /* FridgeMateTests.swift */; };
+		85BD2A6F2C7586B20063F141 /* FridgeMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A6E2C7586B20063F141 /* FridgeMateUITests.swift */; };
+		85BD2A712C7586B20063F141 /* FridgeMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A702C7586B20063F141 /* FridgeMateUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85BD2A612C7586B20063F141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85BD2A482C7586B10063F141 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85BD2A4F2C7586B10063F141;
+			remoteInfo = FridgeMate;
+		};
+		85BD2A6B2C7586B20063F141 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85BD2A482C7586B10063F141 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85BD2A4F2C7586B10063F141;
+			remoteInfo = FridgeMate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85BD2A502C7586B10063F141 /* FridgeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BD2A532C7586B10063F141 /* FridgeMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateApp.swift; sourceTree = "<group>"; };
+		85BD2A552C7586B10063F141 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85BD2A572C7586B20063F141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85BD2A5A2C7586B20063F141 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85BD2A602C7586B20063F141 /* FridgeMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BD2A642C7586B20063F141 /* FridgeMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateTests.swift; sourceTree = "<group>"; };
+		85BD2A6A2C7586B20063F141 /* FridgeMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BD2A6E2C7586B20063F141 /* FridgeMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateUITests.swift; sourceTree = "<group>"; };
+		85BD2A702C7586B20063F141 /* FridgeMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85BD2A4D2C7586B10063F141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BD2A5D2C7586B20063F141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BD2A672C7586B20063F141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85BD2A472C7586B10063F141 = {
+			isa = PBXGroup;
+			children = (
+				85BD2A522C7586B10063F141 /* FridgeMate */,
+				85BD2A632C7586B20063F141 /* FridgeMateTests */,
+				85BD2A6D2C7586B20063F141 /* FridgeMateUITests */,
+				85BD2A512C7586B10063F141 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85BD2A512C7586B10063F141 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85BD2A502C7586B10063F141 /* FridgeMate.app */,
+				85BD2A602C7586B20063F141 /* FridgeMateTests.xctest */,
+				85BD2A6A2C7586B20063F141 /* FridgeMateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85BD2A522C7586B10063F141 /* FridgeMate */ = {
+			isa = PBXGroup;
+			children = (
+				85BD2A532C7586B10063F141 /* FridgeMateApp.swift */,
+				85BD2A552C7586B10063F141 /* ContentView.swift */,
+				85BD2A572C7586B20063F141 /* Assets.xcassets */,
+				85BD2A592C7586B20063F141 /* Preview Content */,
+			);
+			path = FridgeMate;
+			sourceTree = "<group>";
+		};
+		85BD2A592C7586B20063F141 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				85BD2A5A2C7586B20063F141 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85BD2A632C7586B20063F141 /* FridgeMateTests */ = {
+			isa = PBXGroup;
+			children = (
+				85BD2A642C7586B20063F141 /* FridgeMateTests.swift */,
+			);
+			path = FridgeMateTests;
+			sourceTree = "<group>";
+		};
+		85BD2A6D2C7586B20063F141 /* FridgeMateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85BD2A6E2C7586B20063F141 /* FridgeMateUITests.swift */,
+				85BD2A702C7586B20063F141 /* FridgeMateUITestsLaunchTests.swift */,
+			);
+			path = FridgeMateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85BD2A4F2C7586B10063F141 /* FridgeMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BD2A742C7586B20063F141 /* Build configuration list for PBXNativeTarget "FridgeMate" */;
+			buildPhases = (
+				85BD2A4C2C7586B10063F141 /* Sources */,
+				85BD2A4D2C7586B10063F141 /* Frameworks */,
+				85BD2A4E2C7586B10063F141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FridgeMate;
+			productName = FridgeMate;
+			productReference = 85BD2A502C7586B10063F141 /* FridgeMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85BD2A5F2C7586B20063F141 /* FridgeMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BD2A772C7586B20063F141 /* Build configuration list for PBXNativeTarget "FridgeMateTests" */;
+			buildPhases = (
+				85BD2A5C2C7586B20063F141 /* Sources */,
+				85BD2A5D2C7586B20063F141 /* Frameworks */,
+				85BD2A5E2C7586B20063F141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85BD2A622C7586B20063F141 /* PBXTargetDependency */,
+			);
+			name = FridgeMateTests;
+			productName = FridgeMateTests;
+			productReference = 85BD2A602C7586B20063F141 /* FridgeMateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85BD2A692C7586B20063F141 /* FridgeMateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BD2A7A2C7586B20063F141 /* Build configuration list for PBXNativeTarget "FridgeMateUITests" */;
+			buildPhases = (
+				85BD2A662C7586B20063F141 /* Sources */,
+				85BD2A672C7586B20063F141 /* Frameworks */,
+				85BD2A682C7586B20063F141 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85BD2A6C2C7586B20063F141 /* PBXTargetDependency */,
+			);
+			name = FridgeMateUITests;
+			productName = FridgeMateUITests;
+			productReference = 85BD2A6A2C7586B20063F141 /* FridgeMateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85BD2A482C7586B10063F141 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					85BD2A4F2C7586B10063F141 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					85BD2A5F2C7586B20063F141 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 85BD2A4F2C7586B10063F141;
+					};
+					85BD2A692C7586B20063F141 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 85BD2A4F2C7586B10063F141;
+					};
+				};
+			};
+			buildConfigurationList = 85BD2A4B2C7586B10063F141 /* Build configuration list for PBXProject "FridgeMate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85BD2A472C7586B10063F141;
+			productRefGroup = 85BD2A512C7586B10063F141 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85BD2A4F2C7586B10063F141 /* FridgeMate */,
+				85BD2A5F2C7586B20063F141 /* FridgeMateTests */,
+				85BD2A692C7586B20063F141 /* FridgeMateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85BD2A4E2C7586B10063F141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BD2A5B2C7586B20063F141 /* Preview Assets.xcassets in Resources */,
+				85BD2A582C7586B20063F141 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BD2A5E2C7586B20063F141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BD2A682C7586B20063F141 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85BD2A4C2C7586B10063F141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BD2A562C7586B10063F141 /* ContentView.swift in Sources */,
+				85BD2A542C7586B10063F141 /* FridgeMateApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BD2A5C2C7586B20063F141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BD2A652C7586B20063F141 /* FridgeMateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85BD2A662C7586B20063F141 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85BD2A712C7586B20063F141 /* FridgeMateUITestsLaunchTests.swift in Sources */,
+				85BD2A6F2C7586B20063F141 /* FridgeMateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85BD2A622C7586B20063F141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85BD2A4F2C7586B10063F141 /* FridgeMate */;
+			targetProxy = 85BD2A612C7586B20063F141 /* PBXContainerItemProxy */;
+		};
+		85BD2A6C2C7586B20063F141 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85BD2A4F2C7586B10063F141 /* FridgeMate */;
+			targetProxy = 85BD2A6B2C7586B20063F141 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		85BD2A722C7586B20063F141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85BD2A732C7586B20063F141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85BD2A752C7586B20063F141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FridgeMate/Preview Content\"";
+				DEVELOPMENT_TEAM = S2W97NUM9L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.leoespinal.FridgeMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85BD2A762C7586B20063F141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FridgeMate/Preview Content\"";
+				DEVELOPMENT_TEAM = S2W97NUM9L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.leoespinal.FridgeMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85BD2A782C7586B20063F141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S2W97NUM9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.leoespinal.FridgeMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FridgeMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FridgeMate";
+			};
+			name = Debug;
+		};
+		85BD2A792C7586B20063F141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S2W97NUM9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.leoespinal.FridgeMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FridgeMate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FridgeMate";
+			};
+			name = Release;
+		};
+		85BD2A7B2C7586B20063F141 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S2W97NUM9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.leoespinal.FridgeMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FridgeMate;
+			};
+			name = Debug;
+		};
+		85BD2A7C2C7586B20063F141 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S2W97NUM9L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.leoespinal.FridgeMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FridgeMate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85BD2A4B2C7586B10063F141 /* Build configuration list for PBXProject "FridgeMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BD2A722C7586B20063F141 /* Debug */,
+				85BD2A732C7586B20063F141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BD2A742C7586B20063F141 /* Build configuration list for PBXNativeTarget "FridgeMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BD2A752C7586B20063F141 /* Debug */,
+				85BD2A762C7586B20063F141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BD2A772C7586B20063F141 /* Build configuration list for PBXNativeTarget "FridgeMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BD2A782C7586B20063F141 /* Debug */,
+				85BD2A792C7586B20063F141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BD2A7A2C7586B20063F141 /* Build configuration list for PBXNativeTarget "FridgeMateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BD2A7B2C7586B20063F141 /* Debug */,
+				85BD2A7C2C7586B20063F141 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85BD2A482C7586B10063F141 /* Project object */;
+}
