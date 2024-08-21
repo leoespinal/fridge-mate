@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct FridgeMateApp: App {
+    let container: ModelContainer = {
+        let schema = Schema([PantryItem.self])
+        let container = try! ModelContainer(for: schema, configurations: [])
+        return container
+    }()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
+        .modelContainer(container)
     }
 }
