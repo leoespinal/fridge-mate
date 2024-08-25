@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851AD4F42C7BC15F005DEAF0 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851AD4F32C7BC15F005DEAF0 /* CapsuleButton.swift */; };
 		85BD2A542C7586B10063F141 /* FridgeMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A532C7586B10063F141 /* FridgeMateApp.swift */; };
 		85BD2A562C7586B10063F141 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A552C7586B10063F141 /* MainView.swift */; };
 		85BD2A582C7586B20063F141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BD2A572C7586B20063F141 /* Assets.xcassets */; };
@@ -18,7 +19,7 @@
 		85BD2A842C758A750063F141 /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A832C758A750063F141 /* PantryItem.swift */; };
 		85BD2A862C758B490063F141 /* PantryItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A852C758B490063F141 /* PantryItemCard.swift */; };
 		85BD2A882C7617420063F141 /* AddPantryItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A872C7617420063F141 /* AddPantryItemSheet.swift */; };
-		85BD2A8A2C7617710063F141 /* UpdatePantryItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A892C7617710063F141 /* UpdatePantryItemSheet.swift */; };
+		85BD2A8A2C7617710063F141 /* PantryItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A892C7617710063F141 /* PantryItemSheet.swift */; };
 		85BD2A8D2C761AB00063F141 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A8C2C761AB00063F141 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851AD4F32C7BC15F005DEAF0 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		85BD2A502C7586B10063F141 /* FridgeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BD2A532C7586B10063F141 /* FridgeMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateApp.swift; sourceTree = "<group>"; };
 		85BD2A552C7586B10063F141 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		85BD2A832C758A750063F141 /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
 		85BD2A852C758B490063F141 /* PantryItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItemCard.swift; sourceTree = "<group>"; };
 		85BD2A872C7617420063F141 /* AddPantryItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPantryItemSheet.swift; sourceTree = "<group>"; };
-		85BD2A892C7617710063F141 /* UpdatePantryItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePantryItemSheet.swift; sourceTree = "<group>"; };
+		85BD2A892C7617710063F141 /* PantryItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItemSheet.swift; sourceTree = "<group>"; };
 		85BD2A8C2C761AB00063F141 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +159,8 @@
 				85BD2A7E2C75899F0063F141 /* PantryView.swift */,
 				85BD2A852C758B490063F141 /* PantryItemCard.swift */,
 				85BD2A872C7617420063F141 /* AddPantryItemSheet.swift */,
-				85BD2A892C7617710063F141 /* UpdatePantryItemSheet.swift */,
+				85BD2A892C7617710063F141 /* PantryItemSheet.swift */,
+				851AD4F32C7BC15F005DEAF0 /* CapsuleButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,8 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				85BD2A862C758B490063F141 /* PantryItemCard.swift in Sources */,
+				851AD4F42C7BC15F005DEAF0 /* CapsuleButton.swift in Sources */,
 				85BD2A842C758A750063F141 /* PantryItem.swift in Sources */,
-				85BD2A8A2C7617710063F141 /* UpdatePantryItemSheet.swift in Sources */,
+				85BD2A8A2C7617710063F141 /* PantryItemSheet.swift in Sources */,
 				85BD2A8D2C761AB00063F141 /* Color+Extensions.swift in Sources */,
 				85BD2A7F2C75899F0063F141 /* PantryView.swift in Sources */,
 				85BD2A562C7586B10063F141 /* MainView.swift in Sources */,

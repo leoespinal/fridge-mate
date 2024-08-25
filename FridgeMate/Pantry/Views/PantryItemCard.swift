@@ -8,47 +8,36 @@
 import SwiftUI
 
 struct PantryItemCard: View {
-    let imageName: String
-    let title: String
-    let subtitle: String
-    let quanity: String
-    let location: String
-    let isExpiringSoon: Bool
+    let pantryItem: PantryItem
     
-    init(imageName: String,
-         title: String,
-         subtitle: String,
-         quanity: String,
-         location: String,
-         isExpiringSoon: Bool) {
-        self.imageName = imageName
-        self.title = title
-        self.subtitle = subtitle
-        self.quanity = quanity
-        self.location = location
-        self.isExpiringSoon = isExpiringSoon
+    init(pantryItem: PantryItem) {
+        self.pantryItem = pantryItem
     }
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(systemName: imageName)
+            Image(pantryItem.foodCategory.icon)
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(pantryItem.foodCategory.iconTint)
+                .frame(width: 25, height: 25)
             VStack(alignment: .leading, spacing: 8) {
-                Text(title)
+                Text(pantryItem.name)
                     .font(.subheadline)
                     .fontWeight(.bold)
-                Text(subtitle)
+                Text(pantryItem.subtitle)
                     .font(.caption)
                     .fontWeight(.bold)
-                    .foregroundStyle(isExpiringSoon ? Color.accentOrange : Color.textLightGray)
+                    .foregroundStyle(pantryItem.isExpiring ? Color.accentOrange : Color.textLightGray)
             }
             
             Spacer()
             
-            VStack(alignment: .leading, spacing: 8) {
-                Text(quanity)
+            VStack(alignment: .trailing, spacing: 8) {
+                Text("Qty \(pantryItem.quantity)")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                Text(location)
+                Text(pantryItem.location.rawValue)
                     .font(.caption)
                     .foregroundStyle(.gray)
             }
@@ -63,19 +52,31 @@ struct PantryItemCard: View {
 
 #Preview {
     VStack {
-        PantryItemCard(imageName: "fork.knife",
-                       title: "Beef rib-eye steak",
-                       subtitle: "Expiring in 2 days!",
-                       quanity: "300 g",
-                       location: "Fridge",
-                       isExpiringSoon: true)
+        PantryItemCard(
+            pantryItem: PantryItem(
+                name: "Beef rib-eye steak",
+                quantity: 2,
+                dateAdded: .now,
+                expirationDate: .now,
+                enabledReminder: false,
+                expirationDateReminderDays: 0,
+                location: .fridge,
+                category: .beef
+            )
+        )
         
-        PantryItemCard(imageName: "fork.knife",
-                       title: "Salmon",
-                       subtitle: "11 days in",
-                       quanity: "150 g",
-                       location: "Fridge",
-                       isExpiringSoon: false)
+        PantryItemCard(
+            pantryItem: PantryItem(
+                name: "Beans",
+                quantity: 4,
+                dateAdded: .now,
+                expirationDate: .now,
+                enabledReminder: false,
+                expirationDateReminderDays: 0,
+                location: .dryPantry,
+                category: .veggies
+            )
+        )
     }
     .padding(.horizontal, 16)
 }

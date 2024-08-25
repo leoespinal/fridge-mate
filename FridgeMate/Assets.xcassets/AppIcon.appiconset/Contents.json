@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "icon_App_Store_iPhone_&_iPad.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"

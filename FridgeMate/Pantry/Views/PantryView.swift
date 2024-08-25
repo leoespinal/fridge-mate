@@ -11,26 +11,20 @@ import SwiftData
 struct PantryView: View {
     @Environment(\.modelContext) var context
     @State private var showAddPantryItemSheet = false
+    @State var pantryItemSheetPresentationSelection: PresentationDetent = .height(200)
     @Query(sort: \PantryItem.dateAdded) var pantryItems: [PantryItem]
     @State private var pantryItemToEdit: PantryItem?
     
     init() {
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.blueColor)]
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.blueColor)]
+//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.blueColor)]
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.blueColor)]
     }
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(pantryItems) { pantryItem in
-                    PantryItemCard(
-                        imageName: pantryItem.icon,
-                        title: pantryItem.title,
-                        subtitle: pantryItem.subtitle,
-                        quanity: pantryItem.quantity,
-                        location: pantryItem.location,
-                        isExpiringSoon: pantryItem.isExpiring
-                    )
+                    PantryItemCard(pantryItem: pantryItem)
                     .listRowSeparator(.hidden)
                     .onTapGesture {
                         pantryItemToEdit = pantryItem
@@ -49,14 +43,17 @@ struct PantryView: View {
                 AddPantryItemSheet()
             }
             .sheet(item: $pantryItemToEdit) { pantryItem in
-                UpdatePantryItemSheet(pantryItem: pantryItem)
+                PantryItemSheet(pantryItem: pantryItem,
+                                      pantryItemSheetPresentationSelection: $pantryItemSheetPresentationSelection)
+                    .presentationDetents([.height(250), .large],
+                                         selection: $pantryItemSheetPresentationSelection)
+                    .presentationCornerRadius(20)
             }
             .toolbar {
                 if !pantryItems.isEmpty {
                     Button("Add Pantry Item", systemImage: "plus") {
                         showAddPantryItemSheet = true
                     }
-                    .tint(Color.accentOrange)
                     .fontWeight(.bold)
                 }
             }
@@ -77,7 +74,6 @@ struct PantryView: View {
                             .multilineTextAlignment(.center)
                     }, actions: {
                         Button("Add Item") { showAddPantryItemSheet = true }
-                            .foregroundStyle(Color.accentOrange)
                             .font(.callout)
                             .fontWeight(.semibold)
                     })

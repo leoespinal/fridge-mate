@@ -42,7 +42,6 @@ struct MainView: View {
                     Text("More")
                 }
         }
-        .accentColor(Color.blueColor)
     }
 }
 
