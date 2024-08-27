@@ -88,6 +88,29 @@ struct AddPantryItemSheet: View {
                             location: foodLocation.rawValue,
                             category: foodCategory.rawValue
                         )
+
+                        // Schedule local notification if reminders were enabled
+                        if enableReminders {
+//                            let expirationDateReminderDaysComponents = expirationDateReminderDays.split(separator: " ")
+//                            let reminderDaysString = String(expirationDateReminderDaysComponents[0])
+//                            if let reminderDays = Int(reminderDaysString) {
+//                                let reminderDate = Calendar.current.date(byAdding: .day, value: -reminderDays, to: expirationDate)
+//                                let subtitle = reminderDays <= 1 ?
+//                                "Expires in \(reminderDays) day!" :
+//                                "Expires in \(reminderDays) days!"
+//                                PushNotificationManager.shared.scheduleNotification(
+//                                    with: name,
+//                                    subtitle: subtitle,
+//                                    reminderDate: reminderDate
+//                                )
+//                            }
+                            PushNotificationManager.shared.scheduleNotification(
+                                with: name,
+                                subtitle: "Expires soon!",
+                                reminderDate: .now
+                            )
+                        }
+
                         context.insert(pantryItem)
                         dismiss()
                     }

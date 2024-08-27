@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
+    init() {
+        PushNotificationManager.shared.requestPushNotificationPermissions()
+    }
+    
     var body: some View {
         TabView {
             PantryView()
