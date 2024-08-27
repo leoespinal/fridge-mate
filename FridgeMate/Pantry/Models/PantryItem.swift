@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 import SwiftUI
 
-enum FoodCategory: String, CaseIterable, Codable {
+enum FoodCategory: String, CaseIterable, Codable, Equatable {
     case beef = "Beef"
     case poultry = "Poultry"
     case seafood = "Seafood"
@@ -42,30 +42,6 @@ enum FoodCategory: String, CaseIterable, Codable {
             return "cookie"
         }
     }
-    
-    var iconTint: Color {
-        switch self {
-        case .beef:
-            return .brown
-        case .poultry:
-            break
-        case .seafood:
-            break
-        case .veggies:
-            break
-        case .fruits:
-            break
-        case .dairy:
-            break
-        case .grains:
-            break
-        case .drinks:
-            break
-        case .sweets:
-            break
-        }
-        return .brown
-    }
 }
 
 enum FoodLocation: String, CaseIterable, Codable {
@@ -82,10 +58,18 @@ class PantryItem {
     var expirationDate: Date
     var enabledReminder: Bool
     var expirationDateReminderDays: Int // Number of days before expiration user wants to be reminded
-    var location: FoodLocation
-    var foodCategory: FoodCategory
+    var location: String
+    var foodCategory: String
 
     var subtitle: String {
+        guard !hasExpired else {
+            let expirationDaysAgo = abs(numberOfDaysToExpiration)
+            if expirationDaysAgo == 1 {
+                return "Expired \(expirationDaysAgo) day ago!"
+            } else {
+                return "Expired \(expirationDaysAgo) days ago!"
+            }
+        }
         if isExpiring {
             return numberOfDaysToExpiration == 1 ? "Expiring in \(numberOfDaysToExpiration) day!" : "Expiring in \(numberOfDaysToExpiration) days!"
         } else {
@@ -104,7 +88,7 @@ class PantryItem {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day], from: .now, to: expirationDate)
         guard let daysToExpiration = components.day else { return 0 }
-        return daysToExpiration
+        return daysToExpiration + 1
     }
     
     var isExpiring: Bool {
@@ -128,8 +112,8 @@ class PantryItem {
          expirationDate: Date,
          enabledReminder: Bool,
          expirationDateReminderDays: Int,
-         location: FoodLocation,
-         category: FoodCategory) {
+         location: String,
+         category: String) {
         self.name = name
         self.quantity = quantity
         self.dateAdded = dateAdded

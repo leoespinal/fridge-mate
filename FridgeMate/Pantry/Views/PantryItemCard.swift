@@ -10,17 +10,28 @@ import SwiftUI
 struct PantryItemCard: View {
     let pantryItem: PantryItem
     
+    var subtitleColor: Color {
+        if pantryItem.hasExpired {
+            return .red
+        } else if pantryItem.isExpiring {
+            return .accentOrange
+        } else {
+            return .textLightGray
+        }
+    }
+    
     init(pantryItem: PantryItem) {
         self.pantryItem = pantryItem
     }
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(pantryItem.foodCategory.icon)
-                .resizable()
-                .scaledToFit()
-                .foregroundStyle(pantryItem.foodCategory.iconTint)
-                .frame(width: 25, height: 25)
+            if let icon = FoodCategory(rawValue: pantryItem.foodCategory)?.icon {
+                Image(icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25, height: 25)
+            }
             VStack(alignment: .leading, spacing: 8) {
                 Text(pantryItem.name)
                     .font(.subheadline)
@@ -28,7 +39,7 @@ struct PantryItemCard: View {
                 Text(pantryItem.subtitle)
                     .font(.caption)
                     .fontWeight(.bold)
-                    .foregroundStyle(pantryItem.isExpiring ? Color.accentOrange : Color.textLightGray)
+                    .foregroundStyle(subtitleColor)
             }
             
             Spacer()
@@ -37,9 +48,11 @@ struct PantryItemCard: View {
                 Text("Qty \(pantryItem.quantity)")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                Text(pantryItem.location.rawValue)
-                    .font(.caption)
-                    .foregroundStyle(.gray)
+                if let location = FoodLocation(rawValue: pantryItem.location) {
+                    Text(location.rawValue)
+                        .font(.caption)
+                        .foregroundStyle(.gray)
+                }
             }
         }
         .frame(height: 60)
@@ -60,8 +73,8 @@ struct PantryItemCard: View {
                 expirationDate: .now,
                 enabledReminder: false,
                 expirationDateReminderDays: 0,
-                location: .fridge,
-                category: .beef
+                location: FoodLocation.fridge.rawValue,
+                category: FoodCategory.beef.rawValue
             )
         )
         
@@ -73,8 +86,8 @@ struct PantryItemCard: View {
                 expirationDate: .now,
                 enabledReminder: false,
                 expirationDateReminderDays: 0,
-                location: .dryPantry,
-                category: .veggies
+                location: FoodLocation.dryPantry.rawValue,
+                category: FoodCategory.veggies.rawValue
             )
         )
     }

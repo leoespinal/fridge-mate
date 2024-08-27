@@ -14,6 +14,14 @@ struct PantryItemSheet: View {
     @Binding var pantryItemSheetPresentationSelection: PresentationDetent
     
     private var expirationText: String {
+        guard !pantryItem.hasExpired else {
+            let expirationDaysAgo = abs(pantryItem.numberOfDaysToExpiration)
+            if expirationDaysAgo == 1 {
+                return "\(expirationDaysAgo) day ago!"
+            } else {
+                return "\(expirationDaysAgo) days ago!"
+            }
+        }
         if pantryItem.numberOfDaysToExpiration < 1 {
             return "today!"
         } else if pantryItem.numberOfDaysToExpiration == 1 {
@@ -33,23 +41,30 @@ struct PantryItemSheet: View {
                     Spacer()
                 }
                 
-                HStack {
-                    Image(pantryItem.foodCategory.icon)
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundStyle(pantryItem.foodCategory.iconTint)
-                        .frame(width: 25, height: 25)
-                    Text(pantryItem.foodCategory.rawValue)
-                        .fontWeight(.bold)
+                HStack(spacing: 5) {
+                    if let icon = FoodCategory(rawValue: pantryItem.foodCategory)?.icon {
+                        Image(icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                    }
+                    if let foodCategory = FoodCategory(rawValue: pantryItem.foodCategory) {
+                        Text(foodCategory.rawValue)
+                            .fontWeight(.bold)
+                    }
                     Text("in")
-                    Text(pantryItem.location.rawValue)
-                        .fontWeight(.bold)
+                        .foregroundStyle(Color.textDarkGray)
+                    if let foodLocation = FoodLocation(rawValue: pantryItem.location) {
+                        Text(foodLocation.rawValue)
+                            .fontWeight(.bold)
+                    }
                 }
                 
                 HStack {
                     VStack(alignment: .leading) {
                         Text("In the pantry")
                             .font(.footnote)
+                            .foregroundStyle(Color.textDarkGray)
                         Text(pantryItem.numberOfDaysInPantry != 1 ?
                              "\(pantryItem.numberOfDaysInPantry) days" : "\(pantryItem.numberOfDaysInPantry) day")
                         .font(.title3)
@@ -68,6 +83,18 @@ struct PantryItemSheet: View {
                             .foregroundStyle(Color.accentOrange)
                         }
                         Spacer()
+                    } else if pantryItem.hasExpired {
+                        Divider()
+                        VStack(alignment: .leading) {
+                            Text("Expired")
+                                .font(.footnote)
+                                .foregroundStyle(Color.red)
+                            Text(expirationText)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Color.accentOrange)
+                        }
+                        Spacer()
                     }
                     
                     Divider()
@@ -75,6 +102,7 @@ struct PantryItemSheet: View {
                     VStack(alignment: .leading) {
                         Text("Quantity")
                             .font(.footnote)
+                            .foregroundStyle(Color.textDarkGray)
                         Text("\(pantryItem.quantity)")
                             .font(.title3)
                             .fontWeight(.bold)
@@ -89,10 +117,12 @@ struct PantryItemSheet: View {
                             pantryItemSheetPresentationSelection = .large
                         })
                         CapsuleButton(title: "Mark Consumed", color: .green, fontSize: 16, height: 45, action: .constant {
+                            context.delete(pantryItem)
                             dismiss()
                         })
                     } else {
                         CapsuleButton(title: "Mark Consumed", color: .green, fontSize: 16, height: 45, action: .constant {
+                            context.delete(pantryItem)
                             dismiss()
                         })
                         .padding(.bottom, 16)
@@ -119,13 +149,13 @@ struct PantryItemSheet: View {
                     })
                     if pantryItem.enabledReminder {
                         Picker(selection: $pantryItem.expirationDateReminderDays) {
-                            ForEach(1...99, id: \.self) {
+                            ForEach(1...30, id: \.self) {
                                 if $0 == 1 {
                                     Text("\($0) day")
-                                        .tag("")
+                                        .tag("\($0)")
                                 } else {
                                     Text("\($0) days")
-                                        .tag("")
+                                        .tag("\($0)")
                                 }
                             }
                         } label: {
@@ -136,7 +166,7 @@ struct PantryItemSheet: View {
                     Picker(selection: $pantryItem.foodCategory) {
                         ForEach(FoodCategory.allCases, id: \.self) { foodCategory in
                             Text(foodCategory.rawValue)
-                                .tag("")
+                                .tag(foodCategory.rawValue)
                         }
                     } label: {
                         Text("Category")
@@ -146,7 +176,7 @@ struct PantryItemSheet: View {
                     Picker(selection: $pantryItem.location) {
                         ForEach(FoodLocation.allCases, id: \.self) { foodLocation in
                             Text(foodLocation.rawValue)
-                                .tag("")
+                                .tag(foodLocation.rawValue)
                         }
                     } label: {
                         Text("Location")
@@ -178,8 +208,8 @@ struct PantryItemSheet: View {
                 expirationDate: .now,
                 enabledReminder: false,
                 expirationDateReminderDays: 0,
-                location: .fridge,
-                category: .beef
+                location: FoodLocation.fridge.rawValue,
+                category: FoodCategory.beef.rawValue
             ),
             pantryItemSheetPresentationSelection: .constant(.height(250))
         )
@@ -193,8 +223,8 @@ struct PantryItemSheet: View {
                 expirationDate: .now,
                 enabledReminder: false,
                 expirationDateReminderDays: 0,
-                location: .fridge,
-                category: .beef
+                location: FoodLocation.fridge.rawValue,
+                category: FoodCategory.beef.rawValue
             ),
             pantryItemSheetPresentationSelection: .constant(.large)
         )

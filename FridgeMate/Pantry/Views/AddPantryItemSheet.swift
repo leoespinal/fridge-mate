@@ -12,7 +12,7 @@ struct AddPantryItemSheet: View {
     @Environment(\.dismiss) var dismiss
     @State private var name: String = ""
     @State private var expirationDate: Date = .now
-    @State private var quantity = 0
+    @State private var quantity = 1
     @State private var enableReminders = false
     @State private var expirationDateReminderDays = ""
     @State private var foodLocation: FoodLocation = .fridge
@@ -33,7 +33,7 @@ struct AddPantryItemSheet: View {
                 }
                 .pickerStyle(.automatic)
                 Toggle(isOn: $enableReminders, label: {
-                    Text("Enable Reminder")
+                    Text("Enable Reminders")
                 })
                 if enableReminders {
                     Picker(selection: $expirationDateReminderDays) {
@@ -85,8 +85,8 @@ struct AddPantryItemSheet: View {
                             expirationDate: expirationDate,
                             enabledReminder: enableReminders,
                             expirationDateReminderDays: Int(expirationDateReminderDays) ?? .zero,
-                            location: foodLocation,
-                            category: foodCategory
+                            location: foodLocation.rawValue,
+                            category: foodCategory.rawValue
                         )
                         context.insert(pantryItem)
                         dismiss()

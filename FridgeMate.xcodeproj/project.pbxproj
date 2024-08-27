@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		851AD4F42C7BC15F005DEAF0 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851AD4F32C7BC15F005DEAF0 /* CapsuleButton.swift */; };
+		851AD4F62C7BFC17005DEAF0 /* PantryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851AD4F52C7BFC17005DEAF0 /* PantryFilterView.swift */; };
+		851AD4F82C7BFC49005DEAF0 /* PantryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851AD4F72C7BFC49005DEAF0 /* PantryList.swift */; };
 		85BD2A542C7586B10063F141 /* FridgeMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A532C7586B10063F141 /* FridgeMateApp.swift */; };
 		85BD2A562C7586B10063F141 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD2A552C7586B10063F141 /* MainView.swift */; };
 		85BD2A582C7586B20063F141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BD2A572C7586B20063F141 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		851AD4F32C7BC15F005DEAF0 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
+		851AD4F52C7BFC17005DEAF0 /* PantryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryFilterView.swift; sourceTree = "<group>"; };
+		851AD4F72C7BFC49005DEAF0 /* PantryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryList.swift; sourceTree = "<group>"; };
 		85BD2A502C7586B10063F141 /* FridgeMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BD2A532C7586B10063F141 /* FridgeMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeMateApp.swift; sourceTree = "<group>"; };
 		85BD2A552C7586B10063F141 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				85BD2A872C7617420063F141 /* AddPantryItemSheet.swift */,
 				85BD2A892C7617710063F141 /* PantryItemSheet.swift */,
 				851AD4F32C7BC15F005DEAF0 /* CapsuleButton.swift */,
+				851AD4F52C7BFC17005DEAF0 /* PantryFilterView.swift */,
+				851AD4F72C7BFC49005DEAF0 /* PantryList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,7 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				85BD2A862C758B490063F141 /* PantryItemCard.swift in Sources */,
+				851AD4F82C7BFC49005DEAF0 /* PantryList.swift in Sources */,
 				851AD4F42C7BC15F005DEAF0 /* CapsuleButton.swift in Sources */,
+				851AD4F62C7BFC17005DEAF0 /* PantryFilterView.swift in Sources */,
 				85BD2A842C758A750063F141 /* PantryItem.swift in Sources */,
 				85BD2A8A2C7617710063F141 /* PantryItemSheet.swift in Sources */,
 				85BD2A8D2C761AB00063F141 /* Color+Extensions.swift in Sources */,
