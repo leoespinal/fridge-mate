@@ -170,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				85BD2A822C7589F90063F141 /* Models */,
-				85BD2A812C7589F20063F141 /* ViewModels */,
 				85BD2A802C7589EB0063F141 /* Views */,
 			);
 			path = Pantry;
@@ -188,13 +187,6 @@
 				851AD4F72C7BFC49005DEAF0 /* PantryList.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		85BD2A812C7589F20063F141 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		85BD2A822C7589F90063F141 /* Models */ = {
